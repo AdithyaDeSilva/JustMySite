@@ -6,18 +6,14 @@
 {% endblock  %}
 
 {% block cssFiles %}
+    <link rel="stylesheet" href="{% static "/blog/includes/post.css" %}"/>
     <link rel="stylesheet" href="{% static "/blog/index.css" %}"/>
-{% endblock  %}oc
+{% endblock  %}
 
 {% block content %}
-    <header id= "main-navigation">
-        <h1><a href="">Tech Blog</a></h1>
-        <nav><a href="/posts">All Posts</a></nav>
-    </header>
-
     <section id="welcome">
         <header>
-            <img src="" alt="DeHell - The Author of this Blog.">
+            <img src="{% static "blog/images/dp.jpeg" %}" alt="DeHell - The Author of this Blog.">
             <h2>DEHELL'S BLOG</h2>
         </header>
         <p>This is a tech blog.</p>
@@ -25,21 +21,7 @@
 
     <section id="latest-posts">
         <h2>My Latest Thoughts</h2>
-        <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="" alt="Arduino Programming"/>
-                        <div class="post__content">
-                            <h3>Arduino Programming</h3>
-                            <p>
-                                Arduino is the next PC platform!
-                            </p>
-                        </div>
-                    </a>
-                </article>
-            </li>
-        </ul>
+        <ul>    {% include "blog/includes/post.html" %}  </ul>
     </section>
 
     <section id="about">
@@ -48,4 +30,4 @@
         <p>My Goal!</p>
     </section>
 
-{% endblock  %}
+{% endblock %}

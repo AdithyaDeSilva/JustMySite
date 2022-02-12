@@ -6,7 +6,7 @@ def index(request):
     return render(request, "blog/index.html")
 
 def posts(requset):
-    pass
+    return render(requset, "blog/all-posts.html")
 
 def postDetails():
     pass

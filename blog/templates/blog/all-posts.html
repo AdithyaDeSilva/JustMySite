@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Tech Blog - All Posts
+{% endblock  %}
+
+{% block cssFiles %}
+    <link rel="stylesheet" href="{% static "/blog/includes/post.css" %}"/>
+    <link rel="stylesheet" href="{% static "/blog/all-posts.css" %}"/>
+{% endblock  %}
+
+{% block content %}
+<section id="all-posts">
+    <h2>Collected Posts</h2>
+
+    <ul>
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+    </ul>
+
+</section>
+
+{% endblock  %}
