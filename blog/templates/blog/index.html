@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Tech Blog
+{% endblock  %}
+
+{% block cssFiles %}
+    <link rel="stylesheet" href="{% static "/blog/index.css" %}"/>
+{% endblock  %}oc
+
+{% block content %}
+    <header id= "main-navigation">
+        <h1><a href="">Tech Blog</a></h1>
+        <nav><a href="/posts">All Posts</a></nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="DeHell - The Author of this Blog.">
+            <h2>DEHELL'S BLOG</h2>
+        </header>
+        <p>This is a tech blog.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Arduino Programming"/>
+                        <div class="post__content">
+                            <h3>Arduino Programming</h3>
+                            <p>
+                                Arduino is the next PC platform!
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>I love coding!</p>
+        <p>My Goal!</p>
+    </section>
+
+{% endblock  %}
