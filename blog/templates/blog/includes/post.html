@@ -1,14 +1,12 @@
 {% load static %}
 <li>
-
     <article class="post">
-        <a href="">
+        <a href="{% url "post-detail-page"  "the-mountains"%}">
             <img src="{% static 'blog/images/cover.jpeg' %}" alt="Arduino Programming"/>
             <div class="post__content">
                 <h3>Arduino Programming</h3>
-                
                 <p>
-                    Arduino is the next PC platform!
+                    Arduino is an open-source hardware and software company, project, and user community that designs and manufactures single-board microcontrollers and microcontroller kits for building digital devices.
                 </p>
             </div>
         </a>

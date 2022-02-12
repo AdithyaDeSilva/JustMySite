@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Post Title
+{% endblock  %}
+
+{% block cssFiles %}
+    <link rel="stylesheet" href="{% static "/blog/post-detail.css" %}"/>
+{% endblock  %}
+
+{% block content %}
+    <section id="summary">
+        <h2> Post Title</h2>
+        <article>
+            <img src="{% static 'blog/images/thenos.jpeg' %}" alt="Post Title">
+            <address>By DeHell</address>
+            <div>
+                Last updated on <time> July 10th </time>
+            </div>
+        </article>
+    </section>
+    
+    <main>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus eum nemo, perspiciatis quis delectus eaque necessitatibus corrupti at modi doloribus, repudiandae fugit velit maiores vel minus aspernatur qui iure.
+        Rerum similique et error, officiis illum beatae modi natus sapiente inventore quos aut suscipit quae commodi a optio tenetur! Adipisci quaerat, deserunt eveniet ipsa quos magni enim eum dignissimos maxime?
+        Mollitia cumque sequi et iusto quam cum? Aut architecto eligendi vitae sed excepturi id quo molestias dolorem cumque cupiditate, quasi veritatis deserunt mollitia distinctio nulla fuga expedita rerum odio eaque?
+        Ipsa incidunt explicabo voluptatibus repellat, maxime eius ipsum cupiditate, amet dignissimos asperiores corporis corrupti modi. Quod nesciunt id sed omnis consequatur adipisci? Perferendis ipsum illo reprehenderit tempora. Ducimus, temporibus amet.
+        Cumque dicta adipisci ea quis vel illum aliquid voluptate corporis. Hic adipisci temporibus alias necessitatibus exercitationem aperiam tempore quidem recusandae perferendis error a corrupti laborum debitis quo, quaerat, dolores labore.</p>
+    </main>
+{% endblock %}
