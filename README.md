@@ -11,3 +11,5 @@ A Blog using Django - Python Framework
 
 (used a for loop and loaded those posts into index.html)  
 (Added different topics into the blog for get rid of boringness)
+
+* Add post details dynamically

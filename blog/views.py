@@ -31,7 +31,7 @@ allPosts = [
         "image": "processor.jpeg",
         "author": "DeHell",
         "date": date(2021, 5, 21),
-        "title": "Modern Processor Architectures.",
+        "title": "Processor Architectures.",
         "excerpt": """An embedded system is a computer system—a combination of a computer processor, computer memory, and input/output peripheral devices—that has a dedicated function within a larger mechanical or electronic system.""",
         "content": """ 
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus eum nemo, perspiciatis quis delectus eaque necessitatibus corrupti at modi doloribus, repudiandae fugit velit maiores vel minus aspernatur qui iure.
