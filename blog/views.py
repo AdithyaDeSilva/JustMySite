@@ -44,7 +44,7 @@ allPosts = [
         "author": "DeHell",
         "date": date(2021, 2, 19),
         "title": "What is Metaverse?",
-        "excerpt": """A metaverse is a network of 3D virtual worlds focused on social connection. In futurism and science fiction, the term is often described as a hypothetical iteration of the Internet as a single, universal virtual world that is facilitated by the use of virtual and augmented reality headsets.""",
+        "excerpt": """A metaverse is a network of 3D virtual worlds focused on social connection.""",
         "content": """ 
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus eum nemo, perspiciatis quis delectus eaque necessitatibus corrupti at modi doloribus, repudiandae fugit velit maiores vel minus aspernatur qui iure.
         Rerum similique et error, officiis illum beatae modi natus sapiente inventore quos aut suscipit quae commodi a optio tenetur! Adipisci quaerat, deserunt eveniet ipsa quos magni enim eum dignissimos maxime?
@@ -56,7 +56,7 @@ allPosts = [
         "author": "DeHell",
         "date": date(2021, 5, 2),
         "title": "Augmented Reality?",
-        "excerpt": """Augmented reality is an interactive experience of a real-world environment where the objects that reside in the real world are enhanced by computer-generated perceptual information, sometimes across multiple sensory modalities, including visual, auditory, haptic, somatosensory and olfactory.""",
+        "excerpt": """Augmented reality is an interactive experience of a real-world environment where the objects that reside in the real world are enhanced by computer-generated perceptual information.""",
         "content": """ 
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus eum nemo, perspiciatis quis delectus eaque necessitatibus corrupti at modi doloribus, repudiandae fugit velit maiores vel minus aspernatur qui iure.
         Rerum similique et error, officiis illum beatae modi natus sapiente inventore quos aut suscipit quae commodi a optio tenetur! Adipisci quaerat, deserunt eveniet ipsa quos magni enim eum dignissimos maxime?
@@ -77,7 +77,12 @@ def index(request):
     })
 
 def posts(requset):
-    return render(requset, "blog/all-posts.html")
+    return render(requset, "blog/all-posts.html",{
+        "allPosts" : allPosts
+    })
 
 def postDetails(request, slug):
-    return render(request, "blog/post-detail.html")
+    requiredPost =next(post for post in allPosts if post['slug'] == slug)
+    return render(request, "blog/post-detail.html",{
+        "post" : requiredPost
+    })

@@ -13,20 +13,10 @@
 {% block content %}
 <section id="all-posts">
     <h2>Collected Posts</h2>
-
     <ul>
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
+        {% for post in allPosts %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
     </ul>
 </section>
 
