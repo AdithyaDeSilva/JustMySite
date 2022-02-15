@@ -13,3 +13,4 @@ A Blog using Django - Python Framework
 (Added different topics into the blog for get rid of boringness)
 
 * Add post details dynamically
+* Add 404 page
